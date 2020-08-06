@@ -8,7 +8,7 @@ Using MoodMusic, one can generate chord progressions to develop ideas for new or
 Currently in the works and being frequently updated. Chord shuffling is functional.
 
 ## Screenshots
-# Mockups
+#### Mockups
 https://imgur.com/a/gZ8clCk
-# Current State
+#### Current State
 https://imgur.com/a/HoOanbW
