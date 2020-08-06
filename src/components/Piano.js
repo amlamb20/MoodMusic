@@ -5,32 +5,26 @@ const blackKeyNums = [1, 3, 6, 8, 10, 13, 15, 18, 20, 22];
 
 class Piano extends Component {
   render() {
-    const pianoKeys = [];
-    for (var i = 0; i < 24; i++) {
-      if (whiteKeyNums.includes(i) && this.props.pianoKeys.includes(i)) {
-        pianoKeys.push(<WhiteKey highlighted></WhiteKey>);
-      } else if (whiteKeyNums.includes(i))
-        pianoKeys.push(<WhiteKey></WhiteKey>);
+    const pianoKeysWhite = [];
+    const pianoKeysBlack = [];
+    for (var i = 0; i < whiteKeyNums.length + blackKeyNums.length; i++) {
+      if (whiteKeyNums.includes(i)) {
+        if (this.props.pianoKeys.includes(i))
+          pianoKeysWhite.push(<WhiteKey highlighted></WhiteKey>);
+        else pianoKeysWhite.push(<WhiteKey></WhiteKey>);
+      } else {
+        if ([2, 6, 9].includes(pianoKeysBlack.length))
+          pianoKeysBlack.push(<SpaceBetween></SpaceBetween>);
+        if (this.props.pianoKeys.includes(i)) {
+          pianoKeysBlack.push(<BlackKey highlighted></BlackKey>);
+        } else pianoKeysBlack.push(<BlackKey></BlackKey>);
+      }
     }
 
     return (
       <div className="pianoc">
-        <div className="whiteKeyContainer">{pianoKeys}</div>
-        <div className="blackKeyContainer">
-          <BlackKey></BlackKey>
-          <BlackKey></BlackKey>
-          <SpaceBetween></SpaceBetween>
-          <BlackKey></BlackKey>
-          <BlackKey></BlackKey>
-          <BlackKey></BlackKey>
-          <SpaceBetween></SpaceBetween>
-          <BlackKey></BlackKey>
-          <BlackKey></BlackKey>
-          <SpaceBetween></SpaceBetween>
-          <BlackKey></BlackKey>
-          <BlackKey></BlackKey>
-          <BlackKey></BlackKey>
-        </div>
+        <div className="whiteKeyContainer">{pianoKeysWhite}</div>
+        <div className="blackKeyContainer">{pianoKeysBlack}</div>
       </div>
     );
   }

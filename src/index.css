@@ -132,3 +132,8 @@ code {
 .myFormLabel {
   height: 14px !important;
 }
+
+.shuffleButton {
+  background-color: rgb(235, 176, 235) !important;
+  border: none !important;
+}
