@@ -93,6 +93,25 @@ class Chords extends Component {
     this.setState({ pianoKeys });
   };
 
+  numToRoman = (num) => {
+    switch (num) {
+      case 1:
+        return "i";
+      case 2:
+        return "ii";
+      case 3:
+        return "iii";
+      case 4:
+        return "iv";
+      case 5:
+        return "v";
+      case 6:
+        return "vi";
+      case 7:
+        return "vii";
+    }
+  };
+
   render() {
     const currentChords = [];
     for (var i = 0; i < 4; i++) {
@@ -100,6 +119,7 @@ class Chords extends Component {
         <Chord
           key={i}
           chordName={this.state.chords[i]}
+          chordRomanNumeral={this.numToRoman(this.state.currentProg[i])}
           onChordClick={this.handleChordClick}
         />
       );

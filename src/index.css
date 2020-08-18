@@ -137,3 +137,7 @@ code {
   background-color: rgb(235, 176, 235) !important;
   border: none !important;
 }
+
+.chordRomanNumeral {
+  color: rgb(151, 151, 151);
+}
