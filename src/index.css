@@ -85,7 +85,7 @@ code {
   border-bottom-right-radius: 4px;
   background-color: white;
   width: 6.5%;
-  height: 140px;
+  height: 100%;
 }
 
 .blackKey {
@@ -107,6 +107,7 @@ code {
   margin: auto;
   margin-top: 20px;
   width: 600px;
+  height: 140px;
   justify-content: center;
 }
 
@@ -135,9 +136,17 @@ code {
 
 .shuffleButton {
   background-color: rgb(235, 176, 235) !important;
+  width: 200px;
+  border-radius: 16px !important;
   border: none !important;
 }
 
 .chordRomanNumeral {
   color: rgb(151, 151, 151);
+}
+
+.learnSection {
+  background-color: white !important;
+  background: white !important;
+  text-align: left;
 }

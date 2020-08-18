@@ -46,6 +46,12 @@ class Chords extends Component {
     currentProg: [1, 3, 6, 4],
     chords: ["Em", "Em", "Am", "F"],
     pianoKeys: [0, 1, 2],
+    chordBoxes: [
+      [1, "Em", "highlight"],
+      [3, "Em", "no-highlight"],
+      [6, "Am", "no-highlight"],
+      [1, "Em", "no-highlight"],
+    ],
   };
 
   componentDidMount() {
@@ -147,7 +153,7 @@ class Chords extends Component {
                   onClick={this.handleShuffle}
                   className="shuffleButton"
                 >
-                  Shuffle
+                  Shuffle Chords
                 </Button>
               </div>
             </Col>
